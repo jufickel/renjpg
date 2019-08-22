@@ -1,0 +1,20 @@
+[package]
+name = "renjpg"
+version = "0.1.0"
+description = "A tool for prefixing JPEG files with their capture time which is derived from exif data (if present)."
+authors = ["Juergen Fickel <programaro@steinpfeffer.de>"]
+edition = "2018"
+license = "MIT"
+readme = "README"
+homepage = "https://github.com/jufickel/renjpg"
+repository = "https://github.com/jufickel/renjpg"
+
+[dependencies]
+kamadak-exif = "0.3"
+structopt = "0.2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
